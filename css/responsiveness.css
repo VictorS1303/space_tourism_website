@@ -30,4 +30,36 @@
     {
         display: none;
     }
+
+    /* Section: Hero */
+    section.hero
+    {
+        background-image: url('../images/home/background-home-tablet.jpg');
+
+        & .container
+        {
+            flex-direction: row;
+            justify-content: center;
+            gap: 200px;
+
+            & > div:first-child
+            {
+                text-align: left;
+
+                & p
+                {
+                    width: 65ch;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1100px)
+{
+    /* Section: Hero */
+    section.hero
+    {
+        background-image: url('../images/home/background-home-desktop.jpg');
+    }
 }

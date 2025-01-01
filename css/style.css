@@ -72,3 +72,73 @@ nav.main-nav
     cursor: pointer;
     z-index: 100;
 }
+
+/* Section: Hero */
+section.hero
+{
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../images/home/background-home-mobile.jpg');
+    background-repeat: no-repeat;
+    background-position: center/center;
+    background-size: cover;
+
+    & .container
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 80px;
+        padding: 0 120px;
+        align-items: center;
+        color: var(--primary-text-color);
+        
+        & > div
+        {
+            flex-basis: 50%;
+        }
+        
+        & > div:first-child
+        {
+            text-align: center;
+        }
+
+        & > div:first-child h3
+        {
+            font-size: 2.4rem;
+            white-space: nowrap;
+        }
+        
+        & > div:first-child h1
+        {
+            margin: 30px 0;
+            font-size: 5rem;
+        }
+
+        & > div:first-child p
+        {
+            line-height: 1.6;
+        }
+    }
+
+    .explore-btn
+    {
+        display: grid;
+        place-content: center;
+        background-color: #fff;
+        height: 250px;
+        width: 250px;
+        font-size: 2rem;
+        color: #333;
+        border-radius: calc(var(--base-border-radius) * 100);
+        transition: box-shadow .3s ease;
+
+        &:hover
+        {
+            box-shadow: 0 0 0 60px var(--explore-button-hover-box-shadow);
+            transition: box-shadow .3s ease;
+        }
+    }
+}
