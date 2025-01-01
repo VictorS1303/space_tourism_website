@@ -1,0 +1,7 @@
+.glass-background {
+    background: rgba(240, 240, 240, 0.3); /* Semi-transparent white */
+    backdrop-filter: blur(2px);          /* Applies the blur effect */
+    -webkit-backdrop-filter: blur(2px);  /* Safari support */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    height: fit-content;
+  }

@@ -26,7 +26,9 @@
     --body-background-color: ;
     --primary-text-color: #fff;
     --secondry-text-color: #d0d6f9;
-    --hover-underline-background-color: #0b0d17;
+    --mobile-menu-toggle-btn-color: #3acabb;
+    --hover-underline-background-color: #3acabb;
+    --counter-color: #3acabb;
     --explore-button-background-color: #fff;
     --explore-button-hover-box-shadow: rgba(255, 255, 255, .6);
 
@@ -42,6 +44,8 @@
 body
 {
     font-family: 'Merriweather', sans-serif;
+    background-color: midnightblue;
+    overflow:hidden;
 }
 
 header
@@ -93,4 +97,21 @@ a
 li
 {
     list-style: none;
+}
+
+ul
+{
+    counter-reset: list-counter 0; /* Initialize the counter at 0 */
+
+    & li
+    {
+        counter-increment: list-counter; /* Increment the counter for each li */
+
+        &::before
+        {
+            content: counter(list-counter, decimal-leading-zero);
+            color: var(--counter-color);
+        }
+    }
+
 }
